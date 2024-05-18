@@ -1,8 +1,12 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
 function App() {
   return (
-    <>
-      <h1>Hello World! I&apos;m Diego Ramirez!</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route />
+      </Routes>
+    </Router>
   )
 }
 
