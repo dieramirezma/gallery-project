@@ -1,10 +1,8 @@
 import arbol from "../images/arbol1.jpg";
 
-const Image1 = () => {
+const Image1 = ({customStyle}) => {
   return (
-    <div>
-      <img src={arbol} alt="Arbol" />
-    </div>
+    <img src={arbol} alt="Arbol" className={`${customStyle}`} />
   )
 };
 

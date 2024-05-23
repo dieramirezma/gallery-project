@@ -1,10 +1,8 @@
 import campo from "../images/campo2.jpg";
 
-const Image5 = () => {
+const Image5 = ({ customStyle }) => {
   return (
-    <div>
-      <img src={campo} alt="Campo" />
-    </div>
+    <img src={campo} alt="Campo" className={`${customStyle}`} />
   )
 };
 

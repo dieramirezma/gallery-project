@@ -1,10 +1,8 @@
 import rio from "../images/rio.jpg";
 
-const Image12 = () => {
+const Image12 = ({ customStyle }) => {
   return (
-    <div>
-      <img src={rio} alt="Río" />
-    </div>
+    <img src={rio} alt="Río" className={`${customStyle}`} />
   )
 };
 

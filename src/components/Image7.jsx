@@ -1,10 +1,8 @@
 import cielo_noche from "../images/cielo_noche.jpg";
 
-const Image7 = () => {
+const Image7 = ({customStyle}) => {
   return (
-    <div>
-      <img src={cielo_noche} alt="Cielo en la noche" />
-    </div>
+    <img src={cielo_noche} alt="Cielo 2" className={`${customStyle}`} />
   )
 };
 

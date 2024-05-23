@@ -14,24 +14,36 @@ import Image12 from './components/Image12'
 import Navigation from './components/Navigation'
 
 function App() {
+
+  const images = [
+    { path: '/Image1', component: Image1 },
+    { path: '/Image2', component: Image2 },
+    { path: '/Image3', component: Image3 },
+    { path: '/Image4', component: Image4 },
+    { path: '/Image5', component: Image5 },
+    { path: '/Image6', component: Image6 },
+    { path: '/Image7', component: Image7 },
+    { path: '/Image8', component: Image8 },
+    { path: '/Image9', component: Image9 },
+    { path: '/Image10', component: Image10 },
+    { path: '/Image11', component: Image11 },
+    { path: '/Image12', component: Image12 },
+  ]
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/Image1" element={<Image1 />} />
-        <Route path="/Image2" element={<Image2 />} />
-        <Route path="/Image3" element={<Image3 />} />
-        <Route path="/Image4" element={<Image4 />} />
-        <Route path="/Image5" element={<Image5 />} />
-        <Route path="/Image6" element={<Image6 />} />
-        <Route path="/Image7" element={<Image7 />} />
-        <Route path="/Image8" element={<Image8 />} />
-        <Route path="/Image9" element={<Image9 />} />
-        <Route path="/Image10" element={<Image10 />} />
-        <Route path="/Image11" element={<Image11/>} />
-        <Route path="/Image12" element={<Image12/>} />
-      </Routes>
-      <Navigation/>
-    </Router>
+    <div className="flex flex-col justify-center items-center bg-gray-300">
+      <h1 className="my-6 text-3xl font-bold">
+        Photo Gallery
+      </h1>
+      <Router>
+        <Routes>
+          {images.map((image, index) => (
+            <Route key={index} path={image.path} element={<image.component customStyle={'mb-4 w-2/5 rounded-xl'} />} />
+          ))}
+        </Routes>
+        <Navigation />
+      </Router>
+    </div>
   )
 }
 
