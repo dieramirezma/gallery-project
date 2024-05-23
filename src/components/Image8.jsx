@@ -1,9 +1,9 @@
-import cielo_tarde from "../images/cielo_tarde1.jpg";
+import cieloTarde from '../images/cielo_tarde1.jpg'
 
 const Image8 = ({ customStyle }) => {
   return (
-    <img src={cielo_tarde} alt="Cielo 3" className={`${customStyle}`} />
+    <img src={cieloTarde} alt='Cielo 3' className={`${customStyle}`} />
   )
-};
+}
 
-export default Image8;
+export default Image8

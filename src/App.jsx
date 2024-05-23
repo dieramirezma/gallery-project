@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Image1 from './components/Image1'
 import Image2 from './components/Image2'
 import Image3 from './components/Image3'
@@ -13,8 +13,7 @@ import Image11 from './components/Image11'
 import Image12 from './components/Image12'
 import Navigation from './components/Navigation'
 
-function App() {
-
+function App () {
   const images = [
     { path: '/Image1', component: Image1 },
     { path: '/Image2', component: Image2 },
@@ -27,18 +26,18 @@ function App() {
     { path: '/Image9', component: Image9 },
     { path: '/Image10', component: Image10 },
     { path: '/Image11', component: Image11 },
-    { path: '/Image12', component: Image12 },
+    { path: '/Image12', component: Image12 }
   ]
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gray-300">
-      <h1 className="my-6 text-3xl font-bold">
+    <div className='flex flex-col justify-center items-center bg-gray-300'>
+      <h1 className='my-6 text-3xl font-bold'>
         Photo Gallery
       </h1>
       <Router>
         <Routes>
           {images.map((image, index) => (
-            <Route key={index} path={image.path} element={<image.component customStyle={'mb-4 w-2/5 rounded-xl'} />} />
+            <Route key={index} path={image.path} element={<image.component customStyle='mb-4 w-2/5 rounded-xl' />} />
           ))}
         </Routes>
         <Navigation />
